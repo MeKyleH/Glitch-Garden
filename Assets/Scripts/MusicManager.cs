@@ -23,6 +23,7 @@ public class MusicManager : MonoBehaviour {
 		
 		if (thisLevelMusic) { // If there's some music attached
 			audioSource.clip = thisLevelMusic;
+			audioSource.volume = PlayerPrefsManager.GetMasterVolume ();
 			audioSource.loop = true;
 			audioSource.Play ();
 		}

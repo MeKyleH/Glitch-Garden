@@ -6,7 +6,7 @@ public class OptionsController : MonoBehaviour {
 
 	public Slider volumeSlider, diffSlider;
 	public LevelManager levelManager;
-	
+
 	private MusicManager musicManager;
 
 	// Use this for initialization
@@ -25,6 +25,11 @@ public class OptionsController : MonoBehaviour {
 		PlayerPrefsManager.SetMasterVolume (volumeSlider.value);
 		PlayerPrefsManager.SetDifficulty (diffSlider.value);
 		levelManager.LoadLevel ("01a Start");
+	}
+
+	public void SaveAndStart () {
+		PlayerPrefsManager.SetMasterVolume (volumeSlider.value);
+		levelManager.LoadLevel ("02 Level_01");
 	}
 	
 	public void SetDefaults () {
