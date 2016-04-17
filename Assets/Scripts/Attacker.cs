@@ -43,6 +43,5 @@ public class Attacker : MonoBehaviour {
 	//requires the GameObject that is going to be attacked
 	public void Attack(GameObject obj) {
 		currentTarget = obj;
-
 	}
 }
